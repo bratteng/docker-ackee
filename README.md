@@ -2,7 +2,7 @@
 
 Secure image for running ackee.
 
-## Latest stable version
+## Latest version
 ```
-docker pull ghcr.io/bratteng/ackee:stable
+docker pull ghcr.io/bratteng/ackee:latest
 ```
