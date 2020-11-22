@@ -30,9 +30,6 @@ COPY --chown=nonroot --from=build /src/node_modules /srv/app/node_modules
 COPY --chown=nonroot --from=build /src/dist /srv/app/dist
 COPY --chown=nonroot --from=build /src/src /srv/app/src
 
-# copy in our healthcheck script
-COPY --chown=nonroot healthcheck.js /srv/app/src/
-
 # run as an unprivileged user
 USER nonroot
 
