@@ -1,4 +1,4 @@
-FROM debian:buster-slim as source
+FROM node:lts-slim AS build
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 WORKDIR /src/
@@ -10,13 +10,6 @@ RUN set -xe \
 		git \
 	\
 	&& git clone --branch=develop --depth=1 https://github.com/electerious/Ackee.git .
-
-FROM node:lts-slim AS build
-
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-WORKDIR /src/
-
-COPY --from=source /src /src
 
 RUN set -xe \
 	&& yarn install --frozen-lockfile \
