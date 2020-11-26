@@ -1,4 +1,4 @@
-name: Dockerfile linting
+name: pr
 
 on:
   pull_request:
