@@ -76,4 +76,4 @@ jobs:
       -
         name: tmp
         run: |
-          tree /tmp/.buildx-cache
+          ls -la /tmp/.buildx-cache
