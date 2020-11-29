@@ -28,5 +28,5 @@ USER nonroot
 
 EXPOSE 3000
 
-HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD [ "/nodejs/bin/node", "/srv/app/src/healthcheck.js" ]
+HEALTHCHECK --interval=5s --timeout=10s --retries=5 CMD [ "/nodejs/bin/node", "/srv/app/src/healthcheck.js" ]
 CMD ["/srv/app/src/index.js" ]
