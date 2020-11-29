@@ -67,8 +67,3 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: 'trivy-results.sarif'
-
-      -
-        name: tmp
-        run: |
-          tree /tmp/.buildx-cache
